@@ -760,7 +760,7 @@ MathJax.Hub.Config({
                 <!-- user_menu -->
                 <li class="nav-item d-flex align-items-center h-100 ">
                     <div class="usermenu nav-item dropdown user-menu login-menu"><a class="nav-link navbar-avatar" data-toggle="dropdown" href="#" aria-expanded="false" data-animation="scale-up" role="button">
-            <span class="username pr-1">SANDRA CHELANGAT</span>
+            <span class="username pr-1">GERISON KIMATHI</span>
             <span class="avatar avatar-online current">
             <img src="https://ielearning.ueab.ac.ke/theme/image.php/remui/core/1670163832/u/f2" class="userpicture defaultuserpic" width="35" height="35" alt="">
             <i style="border-color: white;"></i>
@@ -2453,7 +2453,7 @@ document.body.className += ' jsenabled';
                         #
                         " target="_blank">Privacy Policy</a>
                         <a href="https://edwiser.org/remui/" rel="nofollow" target="_blank">Powered by Edwiser RemUI</a>
-                    <div class="logininfo">You are logged in as <a href="https://ielearning.ueab.ac.ke/user/profile.php?id=9161" title="View profile">SANDRA CHELANGAT</a> (<a href="https://ielearning.ueab.ac.ke/login/logout.php?sesskey=1S1hEoiyjK">Log out</a>)</div>
+                    <div class="logininfo">You are logged in as <a href="https://ielearning.ueab.ac.ke/user/profile.php?id=9161" title="View profile">GERISON KIMATHI</a> (<a href="https://ielearning.ueab.ac.ke/login/logout.php?sesskey=1S1hEoiyjK">Log out</a>)</div>
                     <div class="tool_usertours-resettourcontainer"></div>
                     <div class="tool_dataprivacy"><a href="https://ielearning.ueab.ac.ke/admin/tool/dataprivacy/summary.php">Data retention summary</a></div><a href="https://download.moodle.org/mobile?version=2021051702.04&amp;lang=en_us&amp;iosappid=633359593&amp;androidappid=com.moodle.moodlemobile">Get the mobile app</a>
                 </div>
@@ -2695,6 +2695,31 @@ M.util.help_popups.setup(Y);
  M.util.js_pending('random63f3513db47fd16'); Y.on('domready', function() { M.util.js_complete("init");  M.util.js_complete('random63f3513db47fd16'); });
 })();
 //]]>
+
+// Set the variable for the quiz number
+var quizNumber = 6;
+
+// Find the input element by its ID
+var inputElement = document.getElementById("mod_quiz-next-nav");
+
+// Create a new anchor tag element
+var linkElement = document.createElement("a");
+
+// Set the href attribute to the quiz page with the variable number
+linkElement.setAttribute("href", "quiz" + quizNumber + ".html");
+
+// Set the text content of the link to "Next page"
+linkElement.textContent = "Next page";
+
+// Set all the classes from the original input element on the new anchor tag
+var classList = inputElement.classList;
+for (var i = 0; i < classList.length; i++) {
+  linkElement.classList.add(classList[i]);
+}
+
+// Replace the input element with the link element
+inputElement.parentNode.replaceChild(linkElement, inputElement);
+
 </script>
 
         </div>
